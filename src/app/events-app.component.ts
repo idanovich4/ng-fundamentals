@@ -1,17 +1,12 @@
-import { Component } from '@angular/core';
-import { AuthService } from './user/auth.service';
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'events-app',
   template: `
-      <nav-bar></nav-bar>
-      <router-outlet></router-outlet>
-      `
+    <nav-bar></nav-bar>
+    <events-list></events-list>
+  `
 })
 export class EventsAppComponent {
-  constructor(private auth:AuthService){}
-
-  ngOnInit(){
-    this.auth.checkAuthenticationStatus();
-  }
+  title = 'app';
 }
